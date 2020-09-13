@@ -32,13 +32,11 @@ dependencies {
 
 task tests(type: Test){
     useJUnitPlatform {
-        includeTags 'withParameters'
+        includeTags 'withoutParameters'
+//        excludeTags 'withParameters'
     }
 }
 
-tasks.withType(Test){
-    systemProperties=systemProperties()
-}
 
 tasks.withType(Test) {
     systemProperties = System.properties
