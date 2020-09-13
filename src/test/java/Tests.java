@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,8 +11,10 @@ public class Tests {
     }
 
     @Test
+    @Tag("withParameters")
     void secondTest(){
-        assertEquals(3,44);
+        String a= System.getProperty("a");
+        assertEquals("3",a);
     }
 
     @Test
