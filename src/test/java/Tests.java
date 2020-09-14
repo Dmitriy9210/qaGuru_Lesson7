@@ -16,6 +16,9 @@ public class Tests {
     @Tag("withParameters")
     void secondTest(){
         String a= System.getProperty("a");
+        System.out.println("++++++++++++++++++");
+        System.out.println(a);
+        System.out.println("++++++++++++++++++");
         assertEquals("3",a);
     }
 
