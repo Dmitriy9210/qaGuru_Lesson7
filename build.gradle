@@ -33,7 +33,7 @@ dependencies {
 task tests(type: Test){
     useJUnitPlatform {
         includeTags 'withoutParameters'
-//        excludeTags 'withParameters'
+        includeTags 'withParameters'
     }
 }
 
