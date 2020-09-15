@@ -3,19 +3,20 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Tag("withoutParameters")
+
+@Tag("good")
 
 public class Tests {
 
     @Test
+    @Tag("bad")
     void firstTest(){
         assertTrue(false);
     }
 
     @Test
-    @Tag("withParameters")
     void secondTest(){
-        String a= System.getProperty("a");
+        String a= System.getProperty("a","3");
         System.out.println("++++++++++++++++++");
         System.out.println(a);
         System.out.println("++++++++++++++++++");
@@ -23,7 +24,7 @@ public class Tests {
     }
 
     @Test
-    void therdTest(){
+    void thirdTest(){
         assertNull(null);
     }
 }

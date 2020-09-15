@@ -30,10 +30,9 @@ dependencies {
     compile ("org.junit.jupiter:junit-jupiter-params:5.6.2")
 }
 
-task tests(type: Test){
+task bad_tests(type: Test){
     useJUnitPlatform {
-        includeTags 'withoutParameters'
-        includeTags 'withParameters'
+        includeTags 'good'
     }
 }
 
@@ -48,8 +47,9 @@ tasks.withType(Test) {
     }
 }
 
-task apple_tests(type: Test) {
+task good_tests(type: Test) {
     useJUnitPlatform {
-        includeTags 'apple_tag'
+        includeTags 'good'
+        excludeTags 'bad'
     }
 }
